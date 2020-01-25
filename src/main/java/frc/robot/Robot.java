@@ -34,6 +34,7 @@ public class Robot extends TimedRobot {
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
     m_robotContainer = new RobotContainer();
+    RobotContainer.drive.resetAngle();
     RobotContainer.drive.resetDistance();
   //  PurePursuitHandler.addPoint(new Point(0, 0));
    // PurePursuitHandler.addPoint(new Point(0, 3));
@@ -41,7 +42,9 @@ public class Robot extends TimedRobot {
     //PurePursuitHandler.addPoint(new Point(0,0));
     //PurePursuitHandler.addPoint(new Point(0,-3));
     PurePursuitHandler.addPoint(new Point(0,0));
-    PurePursuitHandler.addPoint(new Point(1,1));
+    PurePursuitHandler.addPoint(new Point(4,0));
+    PurePursuitHandler.addPoint(new Point(7,4));
+
   }
 
   /**
@@ -69,7 +72,7 @@ public class Robot extends TimedRobot {
       velocities[0] = 0;
       velocities[1] = 0;
     }
-    RobotContainer.drive.tankDrive(velocities[0], velocities[1]);
+    //RobotContainer.drive.tankDrive(velocities[0], velocities[1]);
   }
 
   /**

@@ -32,7 +32,8 @@ public class DriveTrain extends SubsystemBase {
     //leftFollow = new TalonSRX(4);
 
     right.setInverted(true);
-    //right.setSensorPhase(false);
+    right.setSensorPhase(true);
+    left.setSensorPhase(true);
     //leftFollow.setInverted(true);
   }
 
@@ -43,8 +44,9 @@ public class DriveTrain extends SubsystemBase {
     //rightFollow.set(ControlMode.Follower, 3);
   }
   public double getAngle() {
-    return navx.getAngle();
-  }
+    if(!navx.isCalibrating()) {return navx.getAngle();}
+    return 0;
+    }
   public void resetAngle() {
     navx.zeroYaw();
   }

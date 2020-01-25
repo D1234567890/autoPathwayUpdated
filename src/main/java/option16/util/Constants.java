@@ -14,7 +14,7 @@ public class Constants {
 
     //ALL UNITS ARE IN FEET
     public static double wheelRadius = 0.2;
-    public static double maxVelocity = 2.6;
+    public static double maxVelocity = 5.0;
     public static double maxAcceleration = 2;
     public static double wheelBaseWidth = (double)20 / 12;
     public static double kP = 1;
